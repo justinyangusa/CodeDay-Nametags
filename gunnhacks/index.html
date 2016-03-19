@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <title>GunnHacks Nametags</title>
+        <link rel="icon" type="image/png" href="assets/favicon.png" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,500' rel='stylesheet' type='text/css'>
+        <script src="http://labelwriter.com/software/dls/sdk/js/DYMO.Label.Framework.latest.js" type="text/javascript" charset="UTF-8"> </script>
+        <script src="assets/xml.js" type="text/javascript" charset="UTF-8"> </script>
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+    <body>
+        <div class="outer">
+            <div class="middle">
+                <div class="row">
+                    <header>
+                        <img src="assets/logo.png" />
+                    </header>
+                    <form>
+                        <input id="fullName" type="text" autofocus="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Full Name"/> from
+                        <input id="schoolName" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="School" value="Henry M. Gunn High School"/> is a
+                        <input id="typeName" name="person" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Type" value="Hacker"/>
+                        <button id="btn" type="submit">Print</button>
+                    </form>
+                    <br>
+                    <p>Type: Hacker, Mentor, Speaker, Organizer, Volunteer, Advisor, etc.</p>    
+                    <footer>
+                        <p>You'll need <a target="_blank" href="http://www.dymo.com/en-US/labelwriter-450-label-printer#tabContainer">DYMO Software</a>, the <a target="_blank" href="fonts/ProximaNova-Regular.otf">font files</a>, and a terrible browser called Safari.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <embed type="application/x-npapi-dymolabel" id="_DymoLabelFrameworkJslPlugin" width="1" height="1" hidden="">
+    </body>
+</html>
