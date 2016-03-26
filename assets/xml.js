@@ -22,7 +22,6 @@ $(function()
     function onload()
     {
         var fullName = document.getElementById('fullName');
-        var schoolName = document.getElementById('schoolName');
         var typeName = document.getElementById('typeName');
         var printButton = document.getElementById('btn');
 
@@ -49,7 +48,7 @@ $(function()
                 <IsVariable>False</IsVariable>\
                 <HorizontalAlignment>Center</HorizontalAlignment>\
                 <VerticalAlignment>Middle</VerticalAlignment>\
-                <TextFitMode>AlwaysFit</TextFitMode>\
+                <TextFitMode>None</TextFitMode>\
                 <UseFullFontHeight>True</UseFullFontHeight>\
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
@@ -65,31 +64,6 @@ $(function()
             <Bounds X="512.4277" Y="1271.499" Width="4735.146" Height="492.5776"/>\
         </ObjectInfo>\
     <ObjectInfo>\
-    <TextObject>\
-      <Name>School</Name>\
-      <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-      <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-      <LinkedObjectName></LinkedObjectName>\
-      <Rotation>Rotation0</Rotation>\
-      <IsMirrored>False</IsMirrored>\
-      <IsVariable>True</IsVariable>\
-      <HorizontalAlignment>Center</HorizontalAlignment>\
-      <VerticalAlignment>Middle</VerticalAlignment>\
-      <TextFitMode>ShrinkToFit</TextFitMode>\
-      <UseFullFontHeight>True</UseFullFontHeight>\
-      <Verticalized>False</Verticalized>\
-      <StyledText>\
-        <Element>\
-          <String>School</String>\
-          <Attributes>\
-            <Font Family="Proxima Nova" Size="14" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-            <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-          </Attributes>\
-        </Element>\
-      </StyledText>\
-    </TextObject>\
-    <Bounds X="1610" Y="1677.006" Width="2540" Height="622.5"/>\
-  </ObjectInfo>\
     <TextObject>\
       <Name>Participant</Name>\
       <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
@@ -113,7 +87,7 @@ $(function()
         </Element>\
       </StyledText>\
     </TextObject>\
-    <Bounds X="1610" Y="1977.006" Width="2540" Height="622.5"/>\
+    <Bounds X="1610" Y="1677.006" Width="2540" Height="622.5"/>\
   </ObjectInfo>\
     <ObjectInfo>\
     <ImageObject>\
@@ -131,7 +105,7 @@ $(function()
       <HorizontalAlignment>Center</HorizontalAlignment>\
       <VerticalAlignment>Center</VerticalAlignment>\
     </ImageObject>\
-    <Bounds X="325" Y="325" Width="900" Height="1200"/>\
+    <Bounds X="335.9998" Y="320.3906" Width="668.5156" Height="600"/>\
   </ObjectInfo>\
     </DieCutLabel>';
 
@@ -139,7 +113,6 @@ $(function()
 
                 // set label text
                 label.setObjectText("Full Name", fullName.value);
-                label.setObjectText("School", schoolName.value);
                 label.setObjectText("Participant", typeName.value);
                 
                 // select printer to print on
