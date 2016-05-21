@@ -107,6 +107,24 @@ $(function()
     </ImageObject>\
     <Bounds X="335.9998" Y="320.3906" Width="668.5156" Height="600"/>\
   </ObjectInfo>\
+  <ObjectInfo>\
+    <ImageObject>\
+      <Name>Barcode Image</Name>\
+      <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+      <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
+      <LinkedObjectName></LinkedObjectName>\
+      <Rotation>Rotation0</Rotation>\
+      <IsMirrored>False</IsMirrored>\
+      <IsVariable>False</IsVariable>\
+      <Image>Barcode Image</Image>\
+      <ScaleMode>Uniform</ScaleMode>\
+      <BorderWidth>0</BorderWidth>\
+      <BorderColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+      <HorizontalAlignment>Center</HorizontalAlignment>\
+      <VerticalAlignment>Center</VerticalAlignment>\
+    </ImageObject>\
+    <Bounds X="335.9998" Y="2020.3906" Width="3000" Height="1500"/>\
+  </ObjectInfo>\
     </DieCutLabel>';
 
                 var label = dymo.label.framework.openLabelXml(labelXml);
@@ -114,6 +132,9 @@ $(function()
                 // set label text
                 label.setObjectText("Full Name", fullName.value);
                 label.setObjectText("Participant", typeName.value);
+                var barcode = barcodeName.value;
+                var myURI = dymo.label.framework.loadImageAsPngBase64("https://clear.codeday.org/e/ticket/barcode?r=" + barcode);
+                label.setObjectText("Barcode Image",myURI);
                 
                 // select printer to print on
                 // for simplicity sake just use the first LabelWriter printer
